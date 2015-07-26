@@ -1,0 +1,5 @@
+SELECT MAX(Name)
+FROM Orders, Salesperson
+WHERE Orders.salesperson_id = Salesperson.ID
+GROUP BY salesperson_id              
+HAVING COUNT( salesperson_id ) >1
